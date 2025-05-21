@@ -16,6 +16,6 @@ namespace Project__Analiza
             Effective_target.Add(typeof(Open_Areas));
         }
     
-        }
+        
     }
 }
