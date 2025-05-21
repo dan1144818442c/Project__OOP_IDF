@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Armored_vehicles.cs" />
+    <Compile Include="Attack_option.cs" />
+    <Compile Include="Building.cs" />
+    <Compile Include="F16_Fighter_Jet.cs" />
+    <Compile Include="Hermes__460__Zik.cs" />
+    <Compile Include="M109_Artillery.cs" />
+    <Compile Include="Open_Areas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Target.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
