@@ -1,6 +1,6 @@
 using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
     internal class Open_Areas : Target
     {

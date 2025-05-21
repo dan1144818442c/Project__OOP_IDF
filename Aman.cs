@@ -10,19 +10,28 @@ namespace Project_idf___
     internal class Aman:Unit
     {
         //List<Person> peoples;
+        private List<Data_Message> messages = new List<Data_Message>();
         public Aman(string commandor, string purpose) : base(commandor, purpose)
         {
         }
-
-        private class Data_Messege
+        public void AddMessage(Terrorist terrorist)
         {
-            DateTime corrent_time;
-            public Data_Messege(Terrorist Terrorist)
+            messages.Add(new Data_Message(terrorist));
+        }
+
+      
+        private class Data_Message
+        {
+            public DateTime CurrentTime { get; }
+            public string CurrentLocation { get; }
+
+            public Data_Message(Terrorist terrorist)
             {
-                corrent_time = DateTime.Now;
-                corrent__loction = Terrorist.loction;
-                
+                CurrentTime = DateTime.Now;
+                CurrentLocation = terrorist.Get_Last_Location();
             }
         }
+
+        
     }
 }

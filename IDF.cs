@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project_idf___;
 
 namespace Project__Analiza
 {
     internal class IDF : Organizations_class
     {
-        //List<Soldier> Soldiers = new List<Soldier>();
-        //List<Weapon> Weapons = new List<Weapon>();
+        List<Solider> Soldiers = new List<Solider>();
+        List<Attack_options> Weapons = new List<Attack_options>();
         private IDF(string name, string YearOfEstablishment, string general)
         : base(name, YearOfEstablishment, general)
         {
 
         }
-        //public void ReceiveANewSoldier(Soldier NewSoldier)
-        //{
-        //    this.Soldiers.Add(NewSoldier);
-        //} public void ReceiveANewWeapons(Weapon NewSoldier)
-        //{
-        //    this.Weapons.Add(NewSoldier);
-        //}
+        public void ReceiveANewSoldier(Solider NewSoldier)
+        {
+            this.Soldiers.Add(NewSoldier);
+            } public void ReceiveANewWeapons(Attack_options NewAttack_options)
+        {
+            this.Weapons.Add(NewAttack_options);
+        }
     }
 }

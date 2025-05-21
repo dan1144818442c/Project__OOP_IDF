@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
     abstract class Attack_options
     {
@@ -11,8 +11,8 @@ namespace Project__Analiza
         protected int Fuel_supply;
         protected List<Type> Effective_target;
         protected Dictionary<string, int> bomb_type = new Dictionary<string, int>();
-        protected string operated_by ;
-        public Attack_options(string aunique_name, int Ammunition_capacity, int Fuel_supply , string operated_by)
+        protected string operated_by;
+        public Attack_options(string aunique_name, int Ammunition_capacity, int Fuel_supply, string operated_by)
         {
             this.aunique_name = aunique_name;
             this.Ammunition_capacity = Ammunition_capacity;
@@ -32,3 +32,4 @@ namespace Project__Analiza
             }
         }
     }
+}

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
     internal class Hermes__460__Zik__ : Attack_options
     {
@@ -16,7 +16,7 @@ namespace Project__Analiza
             {
                 { "peopels ", ammunitionCapacity -1  },
                 { "cars ", 1 } };
-            Effective_target.Add(typeof(Terorists));
+            Effective_target.Add(typeof(Terrorist));
             Effective_target.Add(typeof(Armored_vehicles) );
 
         }

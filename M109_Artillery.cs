@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
     internal class M109_Artillery : Attack_options
     {
@@ -16,6 +16,6 @@ namespace Project__Analiza
             Effective_target.Add(typeof(Open_Areas));
         }
     
-        }
+        
     }
 }
