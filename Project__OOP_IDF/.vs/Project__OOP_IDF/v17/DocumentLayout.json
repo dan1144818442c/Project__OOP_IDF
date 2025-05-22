@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|c:\\users\\user1\\source\\repos\\project__oop_idf\\project__oop_idf\\project__oop_idf\\hamas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|solutionrelative:project__oop_idf\\hamas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|c:\\users\\user1\\source\\repos\\project__oop_idf\\project__oop_idf\\project__oop_idf\\idf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|solutionrelative:project__oop_idf\\idf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|c:\\users\\user1\\source\\repos\\project__oop_idf\\project__oop_idf\\project__oop_idf\\organizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|solutionrelative:project__oop_idf\\organizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|c:\\users\\user1\\source\\repos\\project__oop_idf\\project__oop_idf\\project__oop_idf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB932025-7B25-4EFA-9881-E714E0CE9CF0}|Project__OOP_IDF\\Project__OOP_IDF.csproj|solutionrelative:project__oop_idf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Program.cs",
+              "RelativeDocumentMoniker": "Project__OOP_IDF\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Program.cs",
+              "RelativeToolTip": "Project__OOP_IDF\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:27:59.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Organizations.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Organizations.cs",
+              "RelativeDocumentMoniker": "Project__OOP_IDF\\Organizations.cs",
+              "ToolTip": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Organizations.cs",
+              "RelativeToolTip": "Project__OOP_IDF\\Organizations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:27:58.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IDF.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\IDF.cs",
+              "RelativeDocumentMoniker": "Project__OOP_IDF\\IDF.cs",
+              "ToolTip": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\IDF.cs",
+              "RelativeToolTip": "Project__OOP_IDF\\IDF.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:27:55.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hamas.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Hamas.cs",
+              "RelativeDocumentMoniker": "Project__OOP_IDF\\Hamas.cs",
+              "ToolTip": "C:\\Users\\user1\\source\\repos\\Project__OOP_IDF\\Project__OOP_IDF\\Project__OOP_IDF\\Hamas.cs",
+              "RelativeToolTip": "Project__OOP_IDF\\Hamas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T08:27:53.949Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

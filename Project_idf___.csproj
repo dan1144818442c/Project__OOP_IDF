@@ -48,13 +48,21 @@
     <Compile Include="Attack_option.cs" />
     <Compile Include="Building.cs" />
     <Compile Include="F16_Fighter_Jet.cs" />
+    <Compile Include="Gun.cs" />
     <Compile Include="Hermes__460__Zik.cs" />
+    <Compile Include="knife.cs" />
     <Compile Include="M109_Artillery.cs" />
     <Compile Include="Open_Areas.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rifle_AK47.cs" />
+    <Compile Include="Rifle_M16.cs" />
+    <Compile Include="Solider.cs" />
     <Compile Include="Target.cs" />
+    <Compile Include="Terrorist.cs" />
     <Compile Include="Unit.cs" />
+    <Compile Include="Weapons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

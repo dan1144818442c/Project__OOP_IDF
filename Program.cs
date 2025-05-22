@@ -15,6 +15,7 @@ namespace Project_idf___
             List<Terrorist> terrorists = GenerateRandomTerrorists(5);
             foreach (var terrorist in terrorists)
             {
+                Console.WriteLine(terrorist.weaponslevel());
                 foreach (var item in terrorist.GEt_data_Terorist())
                 {
 
@@ -27,6 +28,7 @@ namespace Project_idf___
                     }
                 Console.WriteLine();
                 Console.WriteLine();
+             
             }
 
         }
