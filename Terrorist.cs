@@ -15,9 +15,9 @@ namespace Project_idf___
         string status;
         int RiskLevel;
         List<Weapons> weapons;
-        Dictionary<DateTime, string> location;
+        Dictionary<string, string> location;
 
-        Dictionary<DateTime, string> data = new Dictionary<DateTime, string>();
+        Dictionary<string, string> data = new Dictionary<string, string>();
         string Last_location;
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
         {
@@ -27,7 +27,10 @@ namespace Project_idf___
             status = "alive";
             weapons = new List<Weapons>();
             Last_location = null;
+
             
+            location = new Dictionary<string, string>();
+
         }
         public string Get_Last_Location()
         {
@@ -52,7 +55,8 @@ namespace Project_idf___
             else
             {
                 Last_location = location;
-                DateTime current_time = DateTime.Now;
+                string current_time =  DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+
                 this.location[current_time] = location;
             }
         }
@@ -86,6 +90,7 @@ namespace Project_idf___
         {
             return weapons;
         }
+
         public List<object> GEt_data_Terorist() {
            List<object>  list = new List<object>();
             list.Add(this.Firstname);

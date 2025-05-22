@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project__Analiza;
+using static Project_idf___.Aman;
 
 namespace Project_idf___
 {
@@ -30,6 +32,31 @@ namespace Project_idf___
                 Console.WriteLine();
              
             }
+
+
+            IDF IDf =  new IDF("Israel defend forsec", "1948" , "Alof Zamir" );
+            F16_Fighter_Jet F16_1 = new F16_Fighter_Jet("Adir 2", 3, 480, "pilot - Dan");
+            Hermes__460__Zik__ hermes__460__Zik__1 = new Hermes__460__Zik__("Hemrmes GAZA", 3, 125, "remote controlled");
+            M109_Artillery m109_Artillery_1 = new M109_Artillery("M109_Artillery - Lbanon", 40, 60, "5 Solider");
+            Aman aman = new Aman("Meir Libro", "Intelligence and cyber operations in the IDF");           IDf.Add_Unit(aman);
+
+            
+           IDf.ReceiveANewWeapons(m109_Artillery_1);
+           IDf.ReceiveANewWeapons(hermes__460__Zik__1);
+           IDf.ReceiveANewWeapons(F16_1);
+            foreach(Terrorist terrorist1 in terrorists)
+            {
+              var msg =  aman.AddMessage(terrorist1);
+                msg.PrintFullTerroristInfo();
+
+
+
+
+            }
+
+
+
+           
 
         }
 
@@ -71,7 +98,7 @@ namespace Project_idf___
                             weapon = new knife();
                             break;
                         default:
-                            weapon = new knife(); // גיבוי
+                            weapon = new knife();
                             break;
                     }
 
