@@ -1,0 +1,7 @@
+C:\Users\user1\source\repos\Project__OOP_IDF\obj\Debug\Project_idf___.csproj.AssemblyReference.cache
+C:\Users\user1\source\repos\Project__OOP_IDF\obj\Debug\Project_idf___.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\repos\Project__OOP_IDF\bin\Debug\Project_idf___.exe.config
+C:\Users\user1\source\repos\Project__OOP_IDF\bin\Debug\Project_idf___.exe
+C:\Users\user1\source\repos\Project__OOP_IDF\bin\Debug\Project_idf___.pdb
+C:\Users\user1\source\repos\Project__OOP_IDF\obj\Debug\Project_idf___.exe
+C:\Users\user1\source\repos\Project__OOP_IDF\obj\Debug\Project_idf___.pdb

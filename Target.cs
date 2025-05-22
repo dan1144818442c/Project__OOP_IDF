@@ -2,7 +2,7 @@ using System;
 
 namespace Project_idf___
 {
-    internal class Target
+    abstract public  class Target
     {
         public string Name { get; set; }
         public string Location { get; set; }

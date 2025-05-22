@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project__Analiza;
 using static Project_idf___.Aman;
 
 namespace Project_idf___
@@ -35,6 +34,12 @@ namespace Project_idf___
             }
 
             IDf.Show_all_Attach_option();
+            Solider solidet1 = new Solider("dan", "sofer", 28, 5);
+            Target boilding1 = new Building("gata city 3" , "abi 3.5987");
+            
+            terrorists[0].updat_loction(boilding1 , solidet1);
+            F16_1.Attack(boilding1 , terrorists[0]);
+            Console.WriteLine(terrorists[0].Get_Status());
 
 
            

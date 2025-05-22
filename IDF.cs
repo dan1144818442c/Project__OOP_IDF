@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
-    internal class IDF : Organizations_class
+    public class IDF: Organizations_class
     {
+
         List<Solider> Soldiers = new List<Solider>();
         List<Attack_options> Weapons = new List<Attack_options>();
         List<Unit> units;

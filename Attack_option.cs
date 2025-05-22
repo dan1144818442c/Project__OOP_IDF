@@ -4,7 +4,7 @@ using Project_idf___;
 
 namespace Project_idf___
 {
-    abstract class Attack_options
+    abstract public class Attack_options
     {
         protected string aunique_name;
         protected int Ammunition_capacity;
@@ -52,7 +52,7 @@ namespace Project_idf___
             }
         }
 
-        public void Attack(Target target)
+        public void Attack(Target target , Terrorist terrorist)
         {
             if (Effective_target.Contains(target.GetType()))
             {
@@ -65,14 +65,16 @@ namespace Project_idf___
                 if (bomb_type[type_bomb] > 0)
                 {
                     bomb_type[type_bomb]--;
+                    Console.WriteLine("Attacking " + target.GetType().Name);
+                    target.Destroy();
+                    terrorist.attack();
                 }
                 else
                 {
                     Console.WriteLine("you dont have this bomb");
                 }
 
-                Console.WriteLine("Attacking " + target.GetType().Name);
-                target.Destroy();
+              
                 // Implement attack logic here
             }
             else

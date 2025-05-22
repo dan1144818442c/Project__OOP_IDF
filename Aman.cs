@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project__Analiza;
 
 namespace Project_idf___
 {
@@ -25,7 +24,7 @@ namespace Project_idf___
         public class Data_Message
         {
             public string CurrentTime { get; }
-            public string CurrentLocation { get; }
+            public Target CurrentLocation { get; }
             public List<object> Data_terorist { get; }
             internal Data_Message(Terrorist terrorist)
             {
