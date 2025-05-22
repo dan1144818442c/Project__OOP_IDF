@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Project_idf___;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
     internal class F16_Fighter_Jet : Attack_options
     {

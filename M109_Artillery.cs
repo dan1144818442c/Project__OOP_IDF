@@ -16,6 +16,6 @@ namespace Project_idf___
             Effective_target.Add(typeof(Open_Areas));
         }
     
-        
+    
     }
 }

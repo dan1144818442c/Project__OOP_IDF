@@ -18,6 +18,8 @@ namespace Project_idf___
             this.Ammunition_capacity = Ammunition_capacity;
             this.Fuel_supply = Fuel_supply;
             this.operated_by = operated_by;
+            this.Effective_target = new List<Type>();
+            this.bomb_type = new Dictionary<string, int>();
         }
 
         public void Add_bomb_type(string bomb, int Ammunition_capacity)
