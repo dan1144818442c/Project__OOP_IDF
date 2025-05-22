@@ -46,6 +46,8 @@ namespace Project_idf___
             }
 
 
+            //public 
+
 
         
             public void PrintFullTerroristInfo()

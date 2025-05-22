@@ -15,21 +15,7 @@ namespace Project_idf___
         static void Main(string[] args)
         {
             List<Terrorist> terrorists = GenerateRandomTerrorists(5);
-            foreach (var terrorist in terrorists)
-            {
-                foreach (var item in terrorist.GEt_data_Terorist())
-                {
-
-                    Console.WriteLine(item);
-                }
-
-                    foreach (Weapons item2 in terrorist.Get_Weapons())
-                    {
-                        Console.WriteLine(item2);
-                    }
-                Console.WriteLine();
-                Console.WriteLine();
-            }
+           
 
 
             IDF IDf =  new IDF("Israel defend forsec", "1948" , "Alof Zamir" );
@@ -46,12 +32,9 @@ namespace Project_idf___
             {
               var msg =  aman.AddMessage(terrorist1);
                 msg.PrintFullTerroristInfo();
-
-
-
-
             }
 
+            IDf.Show_all_Attach_option();
 
 
            
