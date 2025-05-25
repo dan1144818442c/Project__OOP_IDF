@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    public class Terrorist : Person 
+    public class Terrorist : Person
     {
         int rank;
         string status;
@@ -18,7 +18,7 @@ namespace Project_idf___
         Dictionary<string, Target> location;
 
         Dictionary<string, string> data = new Dictionary<string, string>();
-        Target  Last_location;
+        Target Last_location;
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
         {
             if (rank < 0) rank = 0;
@@ -28,7 +28,7 @@ namespace Project_idf___
             weapons = new List<Weapons>();
             Last_location = null;
 
-            
+
             location = new Dictionary<string, Target>();
 
         }
@@ -37,7 +37,7 @@ namespace Project_idf___
             return Last_location;
         }
 
-       public string Get_Status()
+        public string Get_Status()
         {
             return status;
         }
@@ -55,15 +55,15 @@ namespace Project_idf___
             else
             {
                 Last_location = location;
-                string current_time =  DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                string current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
                 this.location[current_time] = location;
             }
         }
         public int weaponslevel()
         {
-            Dictionary<Type, int> weapon = new Dictionary<Type, int>() { {typeof(knife), 1 }, { typeof(Gun), 2 },{ typeof(Rifle_M16) ,3},{typeof(Rifle_AK47),3} };
-            
+            Dictionary<Type, int> weapon = new Dictionary<Type, int>() { { typeof(knife), 1 }, { typeof(Gun), 2 }, { typeof(Rifle_M16), 3 }, { typeof(Rifle_AK47), 3 } };
+
             int level = 0;
             foreach (var itam in weapons)
             {
@@ -73,7 +73,13 @@ namespace Project_idf___
                 }
 
             }
-            RiskLevel= level * rank;
+            if (level == 0)
+            {
+                RiskLevel = rank;
+                return RiskLevel;
+
+            }
+            RiskLevel = level * rank;
             return RiskLevel;
 
 
@@ -95,8 +101,9 @@ namespace Project_idf___
             return weapons;
         }
 
-        public List<object> GEt_data_Terorist() {
-           List<object>  list = new List<object>();
+        public List<object> GEt_data_Terorist()
+        {
+            List<object> list = new List<object>();
             list.Add(this.Firstname);
             list.Add(Lastname);
             list.Add(age);

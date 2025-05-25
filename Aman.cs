@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    internal class Aman:Unit
+    internal class Aman : Unit
     {
         //List<Person> peoples;
         private List<Data_Message> messages = new List<Data_Message>();
@@ -20,7 +20,7 @@ namespace Project_idf___
             return messege;
         }
 
-      
+
         public class Data_Message
         {
             public string CurrentTime { get; }
@@ -45,10 +45,41 @@ namespace Project_idf___
             }
 
 
-            //public 
+            public List<Terrorist> MostDangerousTerrorist(Hamas hamas)
+            {
+
+                List<Terrorist> terrorists = hamas.GetTerrorists();
+                if (terrorists.Count == 0)
+                {
+                    Console.WriteLine("There are no terrorists in Hamas.");
+                    return null;
+                }
+                int mostDangerousLevelTerrorist = 0;
+                List<Terrorist> mostDangerousTerrorist = new List<Terrorist>();
+                
+
+                foreach (Terrorist terrorist in terrorists)
+                {
+                    if (mostDangerousLevelTerrorist < terrorist.weaponslevel()&& terrorist.Get_Status() == "alive")
+                    {
+                        mostDangerousTerrorist.Clear();
+                        mostDangerousTerrorist.Add(terrorist);
+                    }
+                    else if (mostDangerousLevelTerrorist == terrorist.weaponslevel() && terrorist.Get_Status() == "alive")
+                    {
+                        mostDangerousTerrorist.Add(terrorist);
+                    }
+
+                }
+                return mostDangerousTerrorist;
 
 
-        
+            }
+
+
+
+
+
             public void PrintFullTerroristInfo()
             {
                 Console.WriteLine($"--- Message @ {CurrentTime:O}, Location: {CurrentLocation}");
@@ -79,4 +110,4 @@ namespace Project_idf___
     }
 }
 
-        
+
