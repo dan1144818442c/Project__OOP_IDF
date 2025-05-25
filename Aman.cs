@@ -48,7 +48,7 @@ namespace Project_idf___
             public List<Terrorist> MostDangerousTerrorist(Hamas hamas)
             {
 
-                List<Terrorist> terrorists = hamas.GetTerrorists();
+                List<Terrorist> terrorists = hamas.get_list_terorist();
                 if (terrorists.Count == 0)
                 {
                     Console.WriteLine("There are no terrorists in Hamas.");
