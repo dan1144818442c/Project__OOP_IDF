@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    internal class Weapons
+    public class Weapons
     {
       
     }

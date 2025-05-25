@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    internal class Person
+    abstract public class Person
     {
         protected string Firstname;
         protected string Lastname;

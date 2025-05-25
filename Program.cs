@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Project__Analiza;
 using static Project_idf___.Aman;
 
 namespace Project_idf___
@@ -15,23 +14,7 @@ namespace Project_idf___
         static void Main(string[] args)
         {
             List<Terrorist> terrorists = GenerateRandomTerrorists(5);
-            foreach (var terrorist in terrorists)
-            {
-                Console.WriteLine(terrorist.weaponslevel());
-                foreach (var item in terrorist.GEt_data_Terorist())
-                {
-
-                    Console.WriteLine(item);
-                }
-
-                    foreach (Weapons item2 in terrorist.Get_Weapons())
-                    {
-                        Console.WriteLine(item2);
-                    }
-                Console.WriteLine();
-                Console.WriteLine();
-             
-            }
+           
 
 
             IDF IDf =  new IDF("Israel defend forsec", "1948" , "Alof Zamir" );
@@ -48,12 +31,15 @@ namespace Project_idf___
             {
               var msg =  aman.AddMessage(terrorist1);
                 msg.PrintFullTerroristInfo();
-
-
-
-
             }
 
+            IDf.Show_all_Attach_option();
+            Solider solidet1 = new Solider("dan", "sofer", 28, 5);
+            Target boilding1 = new Building("gata city 3" , "abi 3.5987");
+            
+            terrorists[0].updat_loction(boilding1 , solidet1);
+            F16_1.Attack(boilding1 , terrorists[0]);
+            Console.WriteLine(terrorists[0].Get_Status());
 
 
            

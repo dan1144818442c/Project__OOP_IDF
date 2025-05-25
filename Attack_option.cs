@@ -4,7 +4,7 @@ using Project_idf___;
 
 namespace Project_idf___
 {
-    abstract class Attack_options
+    abstract public class Attack_options
     {
         protected string aunique_name;
         protected int Ammunition_capacity;
@@ -31,6 +31,55 @@ namespace Project_idf___
             else
             {
                 Console.WriteLine("dont have this type bomb");
+            }
+
+        }
+
+        public void show_Weapon()
+        {
+            Console.WriteLine("Weapon name: " + aunique_name);
+            Console.WriteLine("Fuel supply: " + Fuel_supply);
+            Console.WriteLine("Operated by: " + operated_by);
+            Console.WriteLine("Effective targets: ");
+            foreach (var target in Effective_target)
+            {
+                Console.WriteLine(target.Name);
+            }
+            Console.WriteLine("Bomb types and their quantities:");
+            foreach (var bomb in bomb_type)
+            {
+                Console.WriteLine(bomb.Key + ": " + bomb.Value);
+            }
+        }
+
+        public void Attack(Target target , Terrorist terrorist)
+        {
+            if (Effective_target.Contains(target.GetType()))
+            {
+                Console.WriteLine("writename of wich bomp you want use:");
+                foreach (var bomb in bomb_type)
+                {
+                    Console.WriteLine(bomb.Key + ": " + bomb.Value);
+                }
+                String type_bomb = Console.ReadLine();
+                if (bomb_type[type_bomb] > 0)
+                {
+                    bomb_type[type_bomb]--;
+                    Console.WriteLine("Attacking " + target.GetType().Name);
+                    target.Destroy();
+                    terrorist.attack();
+                }
+                else
+                {
+                    Console.WriteLine("you dont have this bomb");
+                }
+
+              
+                // Implement attack logic here
+            }
+            else
+            {
+                Console.WriteLine("Target not effective for this weapon.");
             }
         }
     }

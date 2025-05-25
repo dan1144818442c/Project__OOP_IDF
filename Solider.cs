@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    internal class Solider:Person
+    public class Solider:Person
     {
         int rank;
         //List<Weapons>;

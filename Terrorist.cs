@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    internal class Terrorist : Person
+    public class Terrorist : Person 
     {
         int rank;
         string status;
         public List<Weapons> weapons;
-        Dictionary<string, string> location;
+        Dictionary<string, Target> location;
         int RiskLevel;
 
+
         Dictionary<string, string> data = new Dictionary<string, string>();
-        string Last_location;
+        Target  Last_location;
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
         {
             if (rank < 0) rank = 0;
@@ -28,15 +29,17 @@ namespace Project_idf___
             weapons = new List<Weapons>();
             Last_location = null;
             RiskLevel = weaponslevel();
-            location = new Dictionary<string, string>();
+
+
+            location = new Dictionary<string, Target>();
 
         }
-        public string Get_Last_Location()
+        public Target Get_Last_Location()
         {
             return Last_location;
         }
 
-        string Get_Status()
+       public string Get_Status()
         {
             return status;
         }
@@ -45,9 +48,9 @@ namespace Project_idf___
             return rank;
         }
 
-        public void updat_loction(string location, Solider solider)
+        public void updat_loction(Target location, Solider solider)
         {
-            if (solider.Get_Rank() > 3)
+            if (solider.Get_Rank() < 3)
             {
                 Console.WriteLine("Your rank isn't high enough");
             }
@@ -79,6 +82,10 @@ namespace Project_idf___
 
         }
 
+        public void attack()
+        {
+            this.status = "dead";
+        }
         public void add_weapend(Weapons weapon)
         {
 

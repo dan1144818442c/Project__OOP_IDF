@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project__Analiza
+namespace Project_idf___
 {
-    abstract class Organizations_class
+    abstract  public class Organizations_class
     {
+        
         protected string name;
         protected string YearOfEstablishment;
         protected string general;

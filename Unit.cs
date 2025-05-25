@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_idf___
 {
-    abstract class Unit
+    abstract public class Unit
     {
         //Solider Comanndor;
         string commansor;
