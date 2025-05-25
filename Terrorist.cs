@@ -13,9 +13,9 @@ namespace Project_idf___
     {
         int rank;
         string status;
-        int RiskLevel;
-        List<Weapons> weapons;
+        public List<Weapons> weapons;
         Dictionary<string, string> location;
+        int RiskLevel;
 
         Dictionary<string, string> data = new Dictionary<string, string>();
         string Last_location;
@@ -27,8 +27,7 @@ namespace Project_idf___
             status = "alive";
             weapons = new List<Weapons>();
             Last_location = null;
-
-            
+            RiskLevel = weaponslevel();
             location = new Dictionary<string, string>();
 
         }
@@ -55,15 +54,15 @@ namespace Project_idf___
             else
             {
                 Last_location = location;
-                string current_time =  DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                string current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
                 this.location[current_time] = location;
             }
         }
         public int weaponslevel()
         {
-            Dictionary<Type, int> weapon = new Dictionary<Type, int>() { {typeof(knife), 1 }, { typeof(Gun), 2 },{ typeof(Rifle_M16) ,3},{typeof(Rifle_AK47),3} };
-            
+            Dictionary<Type, int> weapon = new Dictionary<Type, int>() { { typeof(knife), 1 }, { typeof(Gun), 2 }, { typeof(Rifle_M16), 3 }, { typeof(Rifle_AK47), 3 } };
+
             int level = 0;
             foreach (var itam in weapons)
             {
@@ -73,7 +72,7 @@ namespace Project_idf___
                 }
 
             }
-            RiskLevel= level * rank;
+            RiskLevel = level * rank;
             return RiskLevel;
 
 
@@ -91,8 +90,9 @@ namespace Project_idf___
             return weapons;
         }
 
-        public List<object> GEt_data_Terorist() {
-           List<object>  list = new List<object>();
+        public List<object> GEt_data_Terorist()
+        {
+            List<object> list = new List<object>();
             list.Add(this.Firstname);
             list.Add(Lastname);
             list.Add(age);
@@ -103,16 +103,6 @@ namespace Project_idf___
             list.Add(Last_location);
             return list;
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 }
