@@ -10,13 +10,18 @@ namespace Project_idf___
     internal class Hamas : Organizations_class
     {
         List<Terrorist> terrorists = new List<Terrorist>();
-        private Hamas(string name, string YearOfEstablishment, string general)
+        public Hamas(string name, string YearOfEstablishment, string general)
         : base(name, YearOfEstablishment, general)
         { }
 
             public void ReceiveANewterrorists(Terrorist NewTerrorist)
         {
             this.terrorists.Add(NewTerrorist);
+        }
+
+        public List<Terrorist> get_list_terorist()
+        {
+            return terrorists;
         }
     }
 }

@@ -26,7 +26,9 @@ namespace Project_idf___
             this.rank = rank;
             status = "alive";
             weapons = new List<Weapons>();
+
             Last_location = null;
+            RiskLevel = weaponslevel();
 
             
             location = new Dictionary<string, Target>();
@@ -46,6 +48,7 @@ namespace Project_idf___
             return rank;
         }
 
+        
         public void updat_loction(Target location, Solider solider)
         {
             if (solider.Get_Rank() < 3)
@@ -88,26 +91,37 @@ namespace Project_idf___
         {
 
             this.weapons.Add(weapon);
+            RiskLevel = weaponslevel();
 
         }
         public List<Weapons> Get_Weapons()
         {
+
             return weapons;
         }
 
-        public List<object> GEt_data_Terorist() {
-           List<object>  list = new List<object>();
-            list.Add(this.Firstname);
-            list.Add(Lastname);
-            list.Add(age);
-            list.Add(rank);
-            list.Add(status);
-            list.Add(weapons);
-            list.Add(location);
-            list.Add(Last_location);
-            return list;
+        public Dictionary<string , object> GEt_data_Terorist() {
+           Dictionary<string, object> data = new Dictionary<string, object>();
+            data.Add("Firstname", this.Firstname);
+            data.Add("Lastname", Lastname);
+            data.Add("Age", age);
+            data.Add("Rank", rank);
+            data.Add("Status", status);
+            data.Add("RiskLevel", RiskLevel);
+            data.Add("Weapons", weapons);
+            data.Add("Location", location);
+            data.Add("Last_location", Last_location);
+
+            return data;
         }
 
+        public void show_data_terorist()
+        {
+            foreach(var item in GEt_data_Terorist())
+            {
+                Console.WriteLine(item);
+            }
+        }
 
 
 

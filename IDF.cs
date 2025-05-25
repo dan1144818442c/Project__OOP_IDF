@@ -39,5 +39,17 @@ namespace Project_idf___
                 Console.WriteLine();
             }
         }
+
+
+        public void show_all_soldiers()
+        {
+            foreach (var solider in Soldiers)
+            {
+                solider.show_Solider();
+                Console.WriteLine();
+            }
+        }
+
+
     }
 }

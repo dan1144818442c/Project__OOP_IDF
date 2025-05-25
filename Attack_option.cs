@@ -54,14 +54,22 @@ namespace Project_idf___
 
         public void Attack(Target target , Terrorist terrorist)
         {
+            String type_bomb;
             if (Effective_target.Contains(target.GetType()))
             {
                 Console.WriteLine("writename of wich bomp you want use:");
-                foreach (var bomb in bomb_type)
+
+                do
                 {
-                    Console.WriteLine(bomb.Key + ": " + bomb.Value);
+                    foreach (var bomb in bomb_type)
+                    {
+                        Console.WriteLine(bomb.Key + ": " + bomb.Value);
+                    }
+
+                    type_bomb = Console.ReadLine();
                 }
-                String type_bomb = Console.ReadLine();
+                while (!bomb_type.ContainsKey(type_bomb));
+                
                 if (bomb_type[type_bomb] > 0)
                 {
                     bomb_type[type_bomb]--;

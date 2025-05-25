@@ -41,10 +41,16 @@ namespace Project_idf___
             F16_1.Attack(boilding1 , terrorists[0]);
             Console.WriteLine(terrorists[0].Get_Status());
 
+            Hamas hamas = new Hamas("hamas Gaza", "2007", "Sinuar");
+            foreach (Terrorist terrorist in terrorists)
+            {
+                hamas.ReceiveANewterrorists(terrorist);
+            }
 
-           
+            List<Terrorist> chois_list  =  aman.get_terorist_by(hamas);
 
         }
+
 
         static List<Terrorist> GenerateRandomTerrorists(int count)
         {
@@ -52,7 +58,7 @@ namespace Project_idf___
             string[] firstNames = { "achmad", "AboALik", "Josef", "Machmood", "Tariq" };
             string[] lastNames = { "Hassan", "Nassar", "Abu", "Farid", "Zidan" };
             List<Terrorist> result = new List<Terrorist>();
-
+           
             for (int i = 0; i < count; i++)
             {
                 string first = firstNames[rnd.Next(firstNames.Length)];

@@ -49,10 +49,13 @@
     <Compile Include="Building.cs" />
     <Compile Include="F16_Fighter_Jet.cs" />
     <Compile Include="Gun.cs" />
+    <Compile Include="Hamas.cs" />
     <Compile Include="Hermes__460__Zik.cs" />
+    <Compile Include="IDF.cs" />
     <Compile Include="knife.cs" />
     <Compile Include="M109_Artillery.cs" />
     <Compile Include="Open_Areas.cs" />
+    <Compile Include="Organizations.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

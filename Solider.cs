@@ -20,5 +20,12 @@ namespace Project_idf___
             return rank;
         }
 
+        public void show_Solider()
+        {
+            Console.WriteLine($"Solider Name: {Firstname} {Lastname}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Rank: {rank}");
+        }
+
     }
 }
