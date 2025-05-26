@@ -16,7 +16,6 @@ namespace Project_idf___
         int RiskLevel;
         List<Weapons> weapons;
         Dictionary<string, Target> location;
-
         Dictionary<string, string> data = new Dictionary<string, string>();
         Target Last_location;
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
@@ -26,11 +25,8 @@ namespace Project_idf___
             this.rank = rank;
             status = "alive";
             weapons = new List<Weapons>();
-
             Last_location = null;
             RiskLevel = weaponslevel();
-
-
             location = new Dictionary<string, Target>();
 
         }
@@ -48,7 +44,7 @@ namespace Project_idf___
             return rank;
         }
 
-        
+
         public void updat_loction(Target location, Solider solider)
         {
             if (solider.Get_Rank() < 3)
@@ -82,6 +78,10 @@ namespace Project_idf___
                 return RiskLevel;
 
             }
+            if (rank<=0) {
+                RiskLevel = level;
+                return RiskLevel;
+            }
             RiskLevel = level * rank;
             return RiskLevel;
 
@@ -106,27 +106,32 @@ namespace Project_idf___
             return weapons;
         }
 
-        public Dictionary<string , object> GEt_data_Terorist() {
-           Dictionary<string, object> data = new Dictionary<string, object>();
-            data.Add("Firstname", this.Firstname);
-            data.Add("Lastname", Lastname);
-            data.Add("Age", age);
-            data.Add("Rank", rank);
-            data.Add("Status", status);
-            data.Add("RiskLevel", RiskLevel);
-            data.Add("Weapons", weapons);
-            data.Add("Location", location);
-            data.Add("Last_location", Last_location);
-
+        public Dictionary<string, object> GEt_data_Terorist()
+        {
+            var data = new Dictionary<string, object>
+            {
+                { "Firstname", this.Firstname },
+                { "Lastname", this.Lastname },
+                { "Age", this.age },
+                { "Rank", this.rank },
+                { "Status", this.status },
+                { "RiskLevel", this.RiskLevel },
+                { "Weapons", ( this.weapons) },
+                { "Location", this.location },
+                { "LastLocation", this.Last_location }
+            };
             return data;
         }
 
         public void show_data_terorist()
         {
-            foreach(var item in GEt_data_Terorist())
+            Console.WriteLine("---------------------------");
+            foreach (var item in GEt_data_Terorist())
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item.Key}: {item.Value}");
             }
+            Console.WriteLine("---------------------------");
+
         }
 
 

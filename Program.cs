@@ -14,31 +14,32 @@ namespace Project_idf___
         static void Main(string[] args)
         {
             List<Terrorist> terrorists = GenerateRandomTerrorists(5);
-           
 
 
-            IDF IDf =  new IDF("Israel defend forsec", "1948" , "Alof Zamir" );
+
+            IDF IDf = new IDF("Israel defend forsec", "1948", "Alof Zamir");
             F16_Fighter_Jet F16_1 = new F16_Fighter_Jet("Adir 2", 3, 480, "pilot - Dan");
             Hermes__460__Zik__ hermes__460__Zik__1 = new Hermes__460__Zik__("Hemrmes GAZA", 3, 125, "remote controlled");
             M109_Artillery m109_Artillery_1 = new M109_Artillery("M109_Artillery - Lbanon", 40, 60, "5 Solider");
-            Aman aman = new Aman("Meir Libro", "Intelligence and cyber operations in the IDF");           IDf.Add_Unit(aman);
+            Aman aman = new Aman("Meir Libro", "Intelligence and cyber operations in the IDF"); IDf.Add_Unit(aman);
 
-            
-           IDf.ReceiveANewWeapons(m109_Artillery_1);
-           IDf.ReceiveANewWeapons(hermes__460__Zik__1);
-           IDf.ReceiveANewWeapons(F16_1);
-            foreach(Terrorist terrorist1 in terrorists)
+
+            IDf.ReceiveANewWeapons(m109_Artillery_1);
+            IDf.ReceiveANewWeapons(hermes__460__Zik__1);
+            IDf.ReceiveANewWeapons(F16_1);
+            foreach (Terrorist terrorist1 in terrorists)
             {
-              var msg =  aman.AddMessage(terrorist1);
+                var msg = aman.AddMessage(terrorist1);
                 msg.PrintFullTerroristInfo();
             }
 
             IDf.Show_all_Attach_option();
             Solider solidet1 = new Solider("dan", "sofer", 28, 5);
-            Target boilding1 = new Building("gata city 3" , "abi 3.5987");
-            
-            terrorists[0].updat_loction(boilding1 , solidet1);
-            F16_1.Attack(boilding1 , terrorists[0]);
+            Target boilding1 = new Building("gata city 3", "abi 3.5987");
+
+            terrorists[0].updat_loction(boilding1, solidet1);
+            //F16_1.Attack(boilding1, terrorists[0]);
+            terrorists[0].show_data_terorist();
             Console.WriteLine(terrorists[0].Get_Status());
 
             Hamas hamas = new Hamas("hamas Gaza", "2007", "Sinuar");
@@ -47,8 +48,21 @@ namespace Project_idf___
                 hamas.ReceiveANewterrorists(terrorist);
             }
 
-            List<Terrorist> chois_list  =  aman.get_terorist_by(hamas);
 
+
+            List<Terrorist> chois_list = aman.get_terorist_by(hamas);
+            foreach (Terrorist t in chois_list)
+            {
+                t.show_data_terorist();
+            }
+            IDf.Show_all_Attach_option();
+            List<Terrorist> Lisr_danger_terorist = aman.MostDangerousTerrorist(hamas);
+            foreach (Terrorist t in Lisr_danger_terorist)
+            {
+                t.show_data_terorist();
+            }
+            Console.WriteLine(hamas.get_list_terorist().Count);
+            
         }
 
 
@@ -58,7 +72,7 @@ namespace Project_idf___
             string[] firstNames = { "achmad", "AboALik", "Josef", "Machmood", "Tariq" };
             string[] lastNames = { "Hassan", "Nassar", "Abu", "Farid", "Zidan" };
             List<Terrorist> result = new List<Terrorist>();
-           
+
             for (int i = 0; i < count; i++)
             {
                 string first = firstNames[rnd.Next(firstNames.Length)];

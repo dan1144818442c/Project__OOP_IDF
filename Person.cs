@@ -16,5 +16,9 @@ namespace Project_idf___
         this.Lastname = last_name;
         this.age = age;
         }
+        public string Get_Full_Name()
+        {
+            return $"{Firstname} {Lastname}";
+        }   
     }
 }
