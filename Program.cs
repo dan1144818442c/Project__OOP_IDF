@@ -37,7 +37,7 @@ namespace Project_idf___
             Solider solidet1 = new Solider("dan", "sofer", 28, 5);
             Target boilding1 = new Building("gata city 3", "abi 3.5987");
 
-            terrorists[0].updat_loction(boilding1, solidet1);
+            aman.updat_loction(terrorists[0] ,  boilding1, solidet1);
             //F16_1.Attack(boilding1, terrorists[0]);
             terrorists[0].show_data_terorist();
             Console.WriteLine(terrorists[0].Get_Status());

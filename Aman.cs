@@ -45,7 +45,21 @@ namespace Project_idf___
 
         }
 
+        public void updat_loction(Terrorist terorist ,  Target location, Solider solider)
+        {
+            if (solider.Get_Rank() < 3)
+            {
+                Console.WriteLine("Your rank isn't high enough");
+            }
+            else
+            {
+               terorist.Last_location = location;
+               
+                string current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
+                terorist.location[current_time] = location;
+            }
+        }
 
         public Data_Message AddMessage(Terrorist terrorist)
         {
@@ -66,7 +80,7 @@ namespace Project_idf___
             Console.WriteLine("4 - Has Weapons?");
             Console.WriteLine("5 - Last Known Location");
             Console.WriteLine("6 - full name ");
-            Console.Write("Choose option (1-5): ");
+            Console.Write("Choose option (1-6): ");
             string choice = Console.ReadLine();
 
             List<Terrorist> results = new List<Terrorist>();

@@ -15,9 +15,9 @@ namespace Project_idf___
         string status;
         int RiskLevel;
         List<Weapons> weapons;
-        Dictionary<string, Target> location;
+        public Dictionary<string, Target> location { get; set; }
         Dictionary<string, string> data = new Dictionary<string, string>();
-        Target Last_location;
+        public Target Last_location { get; set; }
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
         {
             if (rank < 0) rank = 0;
@@ -30,10 +30,7 @@ namespace Project_idf___
             location = new Dictionary<string, Target>();
 
         }
-        public Target Get_Last_Location()
-        {
-            return Last_location;
-        }
+       
 
         public string Get_Status()
         {
@@ -45,20 +42,7 @@ namespace Project_idf___
         }
 
 
-        public void updat_loction(Target location, Solider solider)
-        {
-            if (solider.Get_Rank() < 3)
-            {
-                Console.WriteLine("Your rank isn't high enough");
-            }
-            else
-            {
-                Last_location = location;
-                string current_time = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-
-                this.location[current_time] = location;
-            }
-        }
+      
         public int weaponslevel()
         {
             Dictionary<Type, int> weapon = new Dictionary<Type, int>() { { typeof(knife), 1 }, { typeof(Gun), 2 }, { typeof(Rifle_M16), 3 }, { typeof(Rifle_AK47), 3 } };
