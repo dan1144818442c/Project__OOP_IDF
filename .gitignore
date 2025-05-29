@@ -2,3 +2,10 @@
 /shelf/
 /workspace.xml
 /.vs
+.env
+/.env
+bin/
+obj/
+*.env
+*.exe
+*.pdb
