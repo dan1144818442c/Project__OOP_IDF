@@ -23,7 +23,7 @@ namespace Project_idf___
 
             try
             {
-                string response = await client.SendPromptAsync(" באנגליץ ת תסביר מי זה ביבי נתניהו");
+                string response = await client.SendPromptAsync( Console.ReadLine()); ;
                 Console.WriteLine("Response:\n" + response);
             }
             catch (Exception ex)
