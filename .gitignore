@@ -2,6 +2,7 @@
 /shelf/
 /workspace.xml
 /.vs
+
 # Build results
 bin/
 obj/
@@ -30,3 +31,11 @@ packages/
 
 # Git artifacts by mistake
 git
+
+.env
+/.env
+bin/
+obj/
+*.env
+*.exe
+*.pdb

@@ -92,7 +92,7 @@ namespace Project_idf___
 
                     if (int.TryParse(Console.ReadLine(), out int rank))
                     {
-                        foreach (var t in terrorists)
+                        foreach (Terrorist t in terrorists)
                         {
                             if (t.Get_Rank() == rank)
                                 results.Add(t);
@@ -107,6 +107,10 @@ namespace Project_idf___
                     {
                         if (t.Get_Status() == status)
                             results.Add(t);
+
+                    }
+                    if (results.Count == 0){
+                        Console.WriteLine("no this rank terorist");
                     }
                     break;
 
@@ -138,7 +142,7 @@ namespace Project_idf___
                     string area = Console.ReadLine();
                     foreach (var t in terrorists)
                     {
-                        Target last = t.Get_Last_Location();
+                        Target last = t.Last_location;
                         if (last != null && last.Name == area) // ððéç ùìÎTarget éù Name
                             results.Add(t);
                     }
@@ -178,7 +182,7 @@ namespace Project_idf___
         internal Data_Message(Terrorist terrorist)
         {
             CurrentTime = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-            CurrentLocation = terrorist.Get_Last_Location();
+            CurrentLocation = terrorist.Last_location;
             Data_terorist = terrorist.GEt_data_Terorist();
         }
 

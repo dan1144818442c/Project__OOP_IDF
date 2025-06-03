@@ -11,6 +11,7 @@ namespace Project_idf___
 
         List<Solider> Soldiers = new List<Solider>();
         List<Attack_options> Weapons = new List<Attack_options>();
+        
         List<Unit> units;
         public IDF(string name, string YearOfEstablishment, string general) : base(name, YearOfEstablishment, general)
         {
@@ -30,6 +31,10 @@ namespace Project_idf___
             units.Add(NewUnit);
         }
 
+        public List<Attack_options> GetWeapons()
+        {
+            return Weapons;
+        }
 
         public void Show_all_Attach_option()
         {

@@ -48,11 +48,14 @@
     <Compile Include="Attack_option.cs" />
     <Compile Include="Building.cs" />
     <Compile Include="F16_Fighter_Jet.cs" />
+    <Compile Include="GeminiApiClient.cs" />
+    <Compile Include="GeminiExecutor.cs" />
     <Compile Include="Gun.cs" />
     <Compile Include="Hamas.cs" />
     <Compile Include="Hermes__460__Zik.cs" />
     <Compile Include="IDF.cs" />
     <Compile Include="knife.cs" />
+    <Compile Include="LoadEnv.cs" />
     <Compile Include="M109_Artillery.cs" />
     <Compile Include="Open_Areas.cs" />
     <Compile Include="Organizations.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Weapons.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="api_gemini.env" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

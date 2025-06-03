@@ -6,7 +6,7 @@ namespace Project_idf___
 {
     abstract public class Attack_options
     {
-        protected string aunique_name;
+        protected string aunique_name { get; set; }
         protected int Ammunition_capacity;
         protected int Fuel_supply;
         protected List<Type> Effective_target;
@@ -52,12 +52,13 @@ namespace Project_idf___
             }
         }
 
-        public void Attack(Target target , Terrorist terrorist)
+        public void Attack(Terrorist terrorist, Target target = null)
         {
-            String type_bomb;
-            if (Effective_target.Contains(target.GetType()))
+            string type_bomb;
+
+            if (target == null || Effective_target.Contains(target.GetType()))
             {
-                Console.WriteLine("writename of wich bomp you want use:");
+                Console.WriteLine("Write the name of the bomb you want to use:");
 
                 do
                 {
@@ -69,26 +70,40 @@ namespace Project_idf___
                     type_bomb = Console.ReadLine();
                 }
                 while (!bomb_type.ContainsKey(type_bomb));
-                
+
                 if (bomb_type[type_bomb] > 0)
                 {
                     bomb_type[type_bomb]--;
-                    Console.WriteLine("Attacking " + target.GetType().Name);
-                    target.Destroy();
-                    terrorist.attack();
+
+                    if (target != null)
+                    {
+                        Console.WriteLine("Attacking target: " + target.GetType().Name);
+                        target.Destroy();
+                        terrorist.attack();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Attacking terrorist without specific target.");
+                        terrorist.attack();
+
+                    }
+
                 }
                 else
                 {
-                    Console.WriteLine("you dont have this bomb");
+                    Console.WriteLine("You don't have this bomb.");
                 }
-
-              
-                // Implement attack logic here
             }
             else
             {
                 Console.WriteLine("Target not effective for this weapon.");
             }
         }
+        public string AuniqueName
+        {
+            get { return aunique_name; }
+        }
+
+
     }
 }
