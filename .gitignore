@@ -2,3 +2,31 @@
 /shelf/
 /workspace.xml
 /.vs
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.env
+
+# NuGet Packages
+packages/
+*.nupkg
+*.snupkg
+
+# VS Code files
+.vscode/
+
+# DLLs, XMLs
+*.dll
+*.xml
+*.pdb
+
+# Backup and log files
+*.log
+*.bak
+
+# Git artifacts by mistake
+git
