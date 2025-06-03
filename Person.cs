@@ -20,5 +20,6 @@ namespace Project_idf___
         {
             return $"{Firstname} {Lastname}";
         }   
+        public int Get_Age() { return age; }
     }
 }

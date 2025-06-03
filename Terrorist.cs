@@ -17,7 +17,7 @@ namespace Project_idf___
         List<Weapons> weapons;
         public Dictionary<string, Target> location { get; set; }
         Dictionary<string, string> data = new Dictionary<string, string>();
-        public Target Last_location { get; set; }
+        public Target Last_location {get; set; }
         public Terrorist(string First_name, string Last_name, int age, int rank) : base(First_name, Last_name, age)
         {
             if (rank < 0) rank = 0;
