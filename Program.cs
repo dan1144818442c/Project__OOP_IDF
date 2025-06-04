@@ -175,6 +175,7 @@ namespace Project_idf___
                 Console.WriteLine("3 - Terrorist selection menu");
                 Console.WriteLine("4 - spesific terorist");
                 Console.WriteLine("5 - To attack");
+                Console.WriteLine("6 - Show dengerest terrorist");
                 Console.WriteLine("0 - To exit ");
                 Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine();
@@ -222,11 +223,17 @@ namespace Project_idf___
                         {
                             t.show_data_terorist();
                         }
-                        return;
+                        break;
                     case "5":
                         Menu_Static.HandleAttackMenu(idf.GetWeapons() , terrorists );
                         break;
-                    
+                    case "6":
+                        List<Terrorist> List_danger = aman.MostDangerousTerrorist(hamas);
+                        foreach(Terrorist t in List_danger)
+                        {
+                            t.show_data_terorist();
+                        }
+                        break;
                     default:
                         Console.WriteLine("Invalid choice, please try again.");
                         break;
