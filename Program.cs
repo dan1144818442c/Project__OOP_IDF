@@ -22,21 +22,23 @@ namespace Project_idf___
             F16_Fighter_Jet F16_1 = new F16_Fighter_Jet("Adir 2", 3, 480, "pilot - Dan");
             Hermes__460__Zik__ hermes__460__Zik__1 = new Hermes__460__Zik__("Hemrmes GAZA", 3, 125, "remote controlled");
             M109_Artillery m109_Artillery_1 = new M109_Artillery("M109_Artillery - Lbanon", 40, 60, "5 Solider");
+            M109_Artillery m109_Artillery_2 = new M109_Artillery("M109_Artillery - Yarden", 40, 60, "5 Solider");
             Aman aman = new Aman("Meir Libro", "Intelligence and cyber operations in the IDF"); IDf.Add_Unit(aman);
 
 
             IDf.ReceiveANewWeapons(m109_Artillery_1);
             IDf.ReceiveANewWeapons(hermes__460__Zik__1);
             IDf.ReceiveANewWeapons(F16_1);
+            IDf.ReceiveANewWeapons(m109_Artillery_2);
 
             foreach (Terrorist terrorist1 in terrorists)
             {
                 var msg = aman.AddMessage(terrorist1);
-                msg.PrintFullTerroristInfo();
+                //msg.PrintFullTerroristInfo();
             }
 
 
-            IDf.Show_all_Attach_option();
+            //IDf.Show_all_Attach_option();
             
             Target boilding1 = new Building("gata city 3", "abi 3.5987");
 
@@ -51,7 +53,7 @@ namespace Project_idf___
                 hamas.ReceiveANewterrorists(terrorist);
             }
 
-
+            aman.updat_loction(terrorists[2] , boilding1 , soliders[2]);
 
             //List<Terrorist> chois_list = aman.get_terorist_by(hamas);
             //foreach (Terrorist t in chois_list)
@@ -72,7 +74,7 @@ namespace Project_idf___
 
             //Console.WriteLine(hamas.get_list_terorist().Count);
 
-            hermes__460__Zik__1.Attack( Lisr_danger_terorist[0]);
+            //hermes__460__Zik__1.Attack( Lisr_danger_terorist[0]);
             //Lisr_danger_terorist[0].show_data_terorist();
             //foreach (Terrorist terrorist1 in terrorists)
             //{
@@ -172,12 +174,16 @@ namespace Project_idf___
                 Console.WriteLine("2 - Show Hamas terrorists");
                 Console.WriteLine("3 - Terrorist selection menu");
                 Console.WriteLine("4 - spesific terorist");
-                Console.WriteLine("5 - to attack");
+                Console.WriteLine("5 - To attack");
+                Console.WriteLine("0 - To exit ");
                 Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine();
 
                 switch (choice)
                 {
+                    case "0":
+                        Console.WriteLine("goodby");
+                        return;
                     case "1":
                         Console.WriteLine("\n--- Soldiers ---");
                         foreach (var s in soldiers)
@@ -220,7 +226,7 @@ namespace Project_idf___
                     case "5":
                         Menu_Static.HandleAttackMenu(idf.GetWeapons() , terrorists );
                         break;
-
+                    
                     default:
                         Console.WriteLine("Invalid choice, please try again.");
                         break;
